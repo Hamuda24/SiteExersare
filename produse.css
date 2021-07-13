@@ -1,0 +1,112 @@
+/*Start portofolio*/
+#port {
+	height: 100%;
+	width: 100%;
+}
+#port .item{ overflow: hidden; }
+#port .item img{  transition: .3s;}
+#port .item:hover img{transform: scale(1.1);}
+#port .item .overlay{
+	width:100%; 
+	opacity: 1;
+	background-color: rgba(0,0,0,.0);
+    z-index: 1;
+}
+#port .item:hover .overlay{
+	width:100%;
+	opacity: 1;
+	background-color: rgba(33, 10, 77, 0.815);
+}
+
+#port h4{
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-top: 2rem; 
+    display: inline-block;
+	position: relative;
+    overflow: hidden;
+    color: transparent;
+}
+
+
+#port .item:hover h4{
+	color: rgb(241, 234, 234);
+}
+#port h4::before{ 
+	position: absolute;
+	content:''; 
+	left:0;
+	top:0;	 
+    background-color: rgba(170, 206, 40, 0.774);
+    color: transparent;
+	transition: 1.3s;
+	width: 250%;
+	height: 200%;
+    transform: translateX(-200%);
+    border-radius: 30px;
+    
+
+}
+#port .item:hover h4::before{ 
+	width: 100%;
+	transform: translateX(90%);
+	opacity: 1;
+}
+ /* pseudo clase: hover-cand treci cu mousul versiunea calculator
+ 					focus - cand treci cu degetul versiunea mobile;
+ 	pseudo elemente: before, after, first letter, selection(schimba culoarea cand selectezi ceva din pagina);
+ */
+.sep-center{position:relative; color: rgb(12, 7, 7); margin-bottom: 2rem;}
+
+.sep-center::before{
+	content: ' ';
+	width: 2rem;
+	height: 4px;
+	background-color: white;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: -1rem;
+	transition: .5s;
+
+
+}
+.sep-center:hover::before{
+	width: 10rem;
+}
+
+.sep-center{
+    margin: 100px;}
+
+    #port .btn .fas{
+        position: relative;
+        left: -730px;
+        bottom:  240px;
+    }
+
+
+    #port .card1{
+
+        margin-top: 60px;
+    }
+    
+    #port .card2{
+        margin-top: -60px;
+    }
+    
+    #port .card3{
+
+        margin-top: 90px;
+   
+    }
+
+
+    #port .bolt{
+        top: 100px;
+        left: 700px;
+        
+
+    }

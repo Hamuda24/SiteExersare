@@ -1,0 +1,390 @@
+@import "compass/css3";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(45deg, #e10522 0%, rgba(225, 5, 34, 0) 70%), linear-gradient(135deg, #3105d1 10%, rgba(49, 5, 209, 0) 80%), linear-gradient(225deg, #0adbd8 10%, rgba(10, 219, 216, 0) 80%), linear-gradient(315deg, #09f505 100%, rgba(9, 245, 5, 0) 70%);
+}
+
+.absolute-center, .menu, .menu .btn .fa, .menu .btn.trigger .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  transition-delay: 0.7s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu {
+  width: 5em;
+  height: 5em;
+}
+.menu .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  z-index: -10;
+  cursor: pointer;
+  -webkit-transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+  transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+  transition: opacity 1s, z-index 0.3s, transform 1s;
+  transition: opacity 1s, z-index 0.3s, transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.menu .btn .fa {
+  font-size: 3em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.menu .btn:hover .fa {
+  color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger {
+  opacity: 1;
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.menu .btn.trigger:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.menu .btn.trigger:hover .line {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger:hover .line:before, .menu .btn.trigger:hover .line:after {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger .line {
+  width: 60%;
+  height: 6px;
+  background: #000;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.3s, height 0.3s, top 0.3s;
+  transition: background-color 0.3s, height 0.3s, top 0.3s;
+}
+.menu .btn.trigger .line:before, .menu .btn.trigger .line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #000;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+.menu .btn.trigger .line:before {
+  top: -12px;
+  -webkit-transform-origin: 15% 100%;
+          transform-origin: 15% 100%;
+}
+.menu .btn.trigger .line:after {
+  top: 12px;
+  -webkit-transform-origin: 25% 30%;
+          transform-origin: 25% 30%;
+}
+.menu .rotater {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+ 
+i.face{
+  font-size: 3.5em;
+  margin-left: 3px;
+}
+i.face:hover{
+	transform: rotate(-360deg);
+	color: blue;
+	transition: 1.2s;
+
+}
+i.sign:hover{
+  font-size: 40px;      
+	background:-moz-linear-gradient(top, #da689d 0%, #9c1bc4 100%); 
+    background: -webkit-linear-gradient(top, #0d9646 0%,#505aad 100%); 
+    background: linear-gradient(to bottom, #b4ce40 0%,#582169 100%);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color:transparent;
+	
+	transition: 1.8s;
+
+}
+
+
+i.twit{
+  font-size: 3.5em;
+}
+i.twit:hover{
+	
+  color: purple;
+  
+  text-shadow: 1000px 0px 0px #b930a2, 0px 0px #e740df;
+ 
+  
+	transition: 5s;
+
+}
+i.affi{
+  font-size: 3.5em;
+}
+i.affi:hover{
+  background:-moz-linear-gradient(top, #e6d8de 0%, #dfcee4 100%); 
+  background: -webkit-linear-gradient(top, #cde7d8 0%,#d1e1e4 100%); 
+  background: linear-gradient(to bottom, #b3d80d 0%,#e76a2f 100%);
+  -webkit-background-clip: text;
+ -webkit-text-fill-color:transparent;
+  rotate: 360deg;
+  scale: 1.3;
+	
+	transition: 3s;
+
+}
+
+i.link{
+  font-size: 3.5em;
+  margin-left: 4px;
+}
+i.link:hover{
+	transform: rotate(-720deg);
+  background:-moz-linear-gradient(top, #419be6 0%, #5aa9f3 100%); 
+  background: -webkit-linear-gradient(top, #29cdff 0%,#52d8f0 100%); 
+  background: linear-gradient(to bottom, #4d6de2 0%,#56a2e9 100%);
+  -webkit-background-clip: text;
+ -webkit-text-fill-color:transparent;
+	transition: 3s;
+
+}
+
+i.git{
+  font-size: 3.5em;
+}
+i.git:hover{
+  animation: skew 2s infinite;
+  scale: 1.3;
+  transition: 1s;
+  animation-direction: alternate;
+	color: rgb(53, 187, 228);
+	
+
+}
+@keyframes skew {
+  
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+
+  50% {
+    transform: skew(5deg, 10deg);
+  }
+  100% {
+    transform: skew(-10deg, -10deg);
+  }
+}
+
+i.smile{
+  font-size: 3.5em;
+  margin-left: 3px;
+}
+i.smile:hover{
+  scale: 1.3;
+	transform: rotate(-50deg);
+	color: rgb(63, 202, 20);
+	transition: 1s;
+
+}
+
+i.ball{
+  font-size: 3.5em;
+}
+
+i.ball:hover{
+	animation: heyjump 1s infinite;
+	background:-moz-linear-gradient(top, #d4e444 0%, #f3e634 100%); 
+  background: -webkit-linear-gradient(top, #df851e 0%,#e0d538 100%); 
+  background: linear-gradient(to bottom, #47070c 0%,#f53d3d 50% ,#f5f247 100%);
+  -webkit-background-clip: text;
+ -webkit-text-fill-color:transparent;
+  transition: 2s;
+ 
+  
+
+}
+@keyframes heyjump{
+	0%{transform: translateY(0px);}
+	50%{transform: translateY(12px);}
+	
+}
+
+.menu.active .btn-icon {
+  opacity: 1;
+  z-index: 50;
+}
+.menu.active .trigger .line {
+  height: 0px;
+  top: 45%;
+}
+.menu.active .trigger .line:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 110%;
+}
+.menu.active .trigger .line:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 110%;
+}
+
+.rotater:nth-child(1) {
+  -webkit-transform: rotate(-22.5deg);
+          transform: rotate(-22.5deg);
+}
+
+.menu.active .rotater:nth-child(1) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(22.5deg);
+          transform: translateY(-10em) rotate(22.5deg);
+}
+
+.rotater:nth-child(2) {
+  -webkit-transform: rotate(22.5deg);
+          transform: rotate(22.5deg);
+}
+
+.menu.active .rotater:nth-child(2) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-22.5deg);
+          transform: translateY(-10em) rotate(-22.5deg);
+}
+
+.rotater:nth-child(3) {
+  -webkit-transform: rotate(67.5deg);
+          transform: rotate(67.5deg);
+}
+
+.menu.active .rotater:nth-child(3) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-67.5deg);
+          transform: translateY(-10em) rotate(-67.5deg);
+}
+
+.rotater:nth-child(4) {
+  -webkit-transform: rotate(112.5deg);
+          transform: rotate(112.5deg);
+}
+
+.menu.active .rotater:nth-child(4) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-112.5deg);
+          transform: translateY(-10em) rotate(-112.5deg);
+}
+
+.rotater:nth-child(5) {
+  -webkit-transform: rotate(157.5deg);
+          transform: rotate(157.5deg);
+}
+
+.menu.active .rotater:nth-child(5) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-157.5deg);
+          transform: translateY(-10em) rotate(-157.5deg);
+}
+
+.rotater:nth-child(6) {
+  -webkit-transform: rotate(202.5deg);
+          transform: rotate(202.5deg);
+}
+
+.menu.active .rotater:nth-child(6) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-202.5deg);
+          transform: translateY(-10em) rotate(-202.5deg);
+}
+
+.rotater:nth-child(7) {
+  -webkit-transform: rotate(247.5deg);
+          transform: rotate(247.5deg);
+}
+
+.menu.active .rotater:nth-child(7) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-247.5deg);
+          transform: translateY(-10em) rotate(-247.5deg);
+}
+
+.rotater:nth-child(8) {
+  -webkit-transform: rotate(292.5deg);
+          transform: rotate(292.5deg);
+}
+
+.menu.active .rotater:nth-child(8) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-292.5deg);
+          transform: translateY(-10em) rotate(-292.5deg);
+}
+
+
+
+
+
